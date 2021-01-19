@@ -5,5 +5,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface CardDetailsDao extends JpaRepository<CardDetails, Integer> {
 
-
+    CardDetails findByCardNumber(String number);
 }

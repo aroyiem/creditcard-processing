@@ -23,4 +23,16 @@ public class CardDetailsServiceImpl implements CardDetailsService{
     public List<CardDetails> fetchAllCards() {
         return cardDetailsDao.findAll();
     }
+
+    @Override
+    public CardDetails addCard(CardDetails cardDetails) {
+        cardDetails.setCreditBalance(0.0d);
+        return cardDetailsDao.save(cardDetails);
+    }
+
+    @Override
+    public Boolean isCardRegistered(String cardNumber) {
+        CardDetails cardDetails = cardDetailsDao.findByCardNumber(cardNumber);
+        return (null == cardDetails);
+    }
 }

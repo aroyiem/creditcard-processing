@@ -6,4 +6,8 @@ import java.util.List;
 
 public interface CardDetailsService {
     List<CardDetails> fetchAllCards();
+
+    CardDetails addCard(CardDetails cardDetails);
+
+    Boolean isCardRegistered(String cardNumber);
 }
