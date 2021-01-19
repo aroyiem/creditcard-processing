@@ -38,10 +38,10 @@ public class CardDetails implements Serializable {
     @Column(name = "creditlimit")
     @NotNull(message = "Credit Limit is required")
     @DecimalValidatorConstraint(message = "Only 2 decimal places is allowed")
-    private BigDecimal creditLimit;
+    private Double creditLimit;
 
     @Column(name = "creditbalance")
     @DecimalValidatorConstraint(message = "Only 2 decimal place is allowed")
-    private BigDecimal creditBalance;
+    private Double creditBalance;
 
 }

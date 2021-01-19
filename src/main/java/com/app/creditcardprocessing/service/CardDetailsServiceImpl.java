@@ -28,7 +28,7 @@ public class CardDetailsServiceImpl implements CardDetailsService{
 
     @Override
     public CardDetails addCard(CardDetails cardDetails) {
-        cardDetails.setCreditBalance(new BigDecimal(0.00));
+        cardDetails.setCreditBalance(0.00d);
         cardDetails.setCreditLimit(Util.formatTo2DecimalPlaces(cardDetails.getCreditLimit()));
         return cardDetailsDao.save(cardDetails);
     }

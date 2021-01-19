@@ -2,12 +2,11 @@ package com.app.creditcardprocessing.validators;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
-import java.math.BigDecimal;
 
-public class DecimalValidator implements ConstraintValidator<DecimalValidatorConstraint, BigDecimal> {
+public class DecimalValidator implements ConstraintValidator<DecimalValidatorConstraint, Double> {
 
     @Override
-    public boolean isValid(BigDecimal value,
+    public boolean isValid(Double value,
                            ConstraintValidatorContext constraintValidatorContext) {
         // field can have null value
         if(null == value) {
