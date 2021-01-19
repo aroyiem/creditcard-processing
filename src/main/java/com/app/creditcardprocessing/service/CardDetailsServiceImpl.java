@@ -2,10 +2,12 @@ package com.app.creditcardprocessing.service;
 
 import com.app.creditcardprocessing.dao.CardDetailsDao;
 import com.app.creditcardprocessing.entity.CardDetails;
+import com.app.creditcardprocessing.utils.Util;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @Service
@@ -26,13 +28,14 @@ public class CardDetailsServiceImpl implements CardDetailsService{
 
     @Override
     public CardDetails addCard(CardDetails cardDetails) {
-        cardDetails.setCreditBalance(0.0d);
+        cardDetails.setCreditBalance(new BigDecimal(0.00));
+        cardDetails.setCreditLimit(Util.formatTo2DecimalPlaces(cardDetails.getCreditLimit()));
         return cardDetailsDao.save(cardDetails);
     }
 
     @Override
     public Boolean isCardRegistered(String cardNumber) {
         CardDetails cardDetails = cardDetailsDao.findByCardNumber(cardNumber);
-        return (null == cardDetails);
+        return (null != cardDetails);
     }
 }
