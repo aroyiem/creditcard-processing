@@ -30,6 +30,6 @@ public class CardDetails implements Serializable {
     @NotNull(message = "Credit Limit is required")
     private Double creditLimit;
 
-    @Column(name = "balance")
-    private Double balance;
+    @Column(name = "creditbalance")
+    private Double creditBalance;
 }
