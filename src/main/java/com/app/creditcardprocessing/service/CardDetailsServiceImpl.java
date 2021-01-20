@@ -7,7 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
 import org.springframework.stereotype.Service;
 
-import java.math.BigDecimal;
+import javax.transaction.Transactional;
 import java.util.List;
 
 @Service
@@ -27,6 +27,7 @@ public class CardDetailsServiceImpl implements CardDetailsService{
     }
 
     @Override
+    @Transactional
     public CardDetails addCard(CardDetails cardDetails) {
         cardDetails.setCreditBalance(0.00d);
         cardDetails.setCreditLimit(Util.formatTo2DecimalPlaces(cardDetails.getCreditLimit()));
