@@ -1,10 +1,10 @@
 package com.app.creditcardprocessing.exception;
 
-import lombok.Data;
+import lombok.Getter;
 
 import java.io.Serializable;
 
-@Data
+@Getter
 public class CustomFieldError implements Serializable {
 
     private String field;

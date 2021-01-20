@@ -1,12 +1,12 @@
 package com.app.creditcardprocessing.exception;
 
-import lombok.Data;
+import lombok.Getter;
 
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
+@Getter
 public class Error implements Serializable {
 
     private String message;
