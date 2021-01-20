@@ -3,7 +3,6 @@ package com.app.creditcardprocessing.controller;
 import com.app.creditcardprocessing.entity.CardDetails;
 import com.app.creditcardprocessing.exception.RestServiceException;
 import com.app.creditcardprocessing.service.CardDetailsService;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -27,8 +26,7 @@ class CardProcessingControllerTest {
     @MockBean
     private CardDetailsService cardDetailsService;
 
-    @BeforeEach
-    void setUp() {
+    public CardProcessingControllerTest() {
         cardProcessingController = new CardProcessingController(cardDetailsService);
     }
 

@@ -1,6 +1,5 @@
 package com.app.creditcardprocessing.validators;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -9,8 +8,7 @@ class CreditCardNumberValidatorTest {
 
     private CreditCardNumberValidator creditCardNumberValidator;
 
-    @BeforeEach
-    public void setUp() {
+    public CreditCardNumberValidatorTest() {
         creditCardNumberValidator = new CreditCardNumberValidator();
     }
 

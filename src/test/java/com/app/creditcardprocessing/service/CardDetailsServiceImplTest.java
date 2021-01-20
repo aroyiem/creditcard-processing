@@ -2,7 +2,6 @@ package com.app.creditcardprocessing.service;
 
 import com.app.creditcardprocessing.dao.CardDetailsDao;
 import com.app.creditcardprocessing.entity.CardDetails;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;
@@ -28,11 +27,9 @@ public class CardDetailsServiceImplTest {
     @InjectMocks
     private CardDetailsServiceImpl cardDetailsService;
 
-    @BeforeEach
-    public void setUp() {
+    public CardDetailsServiceImplTest() {
         cardDetailsService = new CardDetailsServiceImpl(cardDetailsDao);
     }
-
 
     @Test
     public void test_fetchAllCards() {
