@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @ControllerAdvice
-public class ErrorHandler {
+public class GlobalExceptionHandler {
 
     @ExceptionHandler(MethodArgumentNotValidException.class)
     @ResponseStatus(HttpStatus.BAD_REQUEST)
