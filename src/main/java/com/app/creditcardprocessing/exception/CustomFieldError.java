@@ -14,4 +14,12 @@ public class CustomFieldError implements Serializable {
         this.field = field;
         this.message = message;
     }
+
+    @Override
+    public String toString() {
+        return "CustomFieldError{" +
+                "field='" + field + '\'' +
+                ", message='" + message + '\'' +
+                '}';
+    }
 }
